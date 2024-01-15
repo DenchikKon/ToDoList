@@ -1,0 +1,180 @@
+body {
+    background-color: #0E2837;
+    font-family: "Inria Serif";
+}
+.header {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 30px;
+}
+.title {
+    text-align: center;
+    font-family: "Inria Serif";
+    line-height: 1.5;
+    color: #ADBFFF;
+    font-size: 120px;
+}
+.authorization-btn {
+    font-family: "Inria Serif";
+    color: #FFF;
+    background-image: linear-gradient(to bottom, rgba(5, 0, 255, 0.4), rgba(0, 102, 255, 1));
+    width: 146px;
+    height: 48px;
+    border-radius: 20px;
+}
+.uncompleted-tasks {
+    width: 600px;
+    margin: 0 auto;
+}
+.uncompleted-tasks-header-wrapper {
+    font-family: "Inria Serif";
+    font-size: 30px;
+    color: #ADBFFF;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+}
+.arrow {
+    transition: 1s linear;
+
+}
+.arrow:hover {
+    transform: rotate(90deg);
+}
+.line {
+    color: #ADBFFF;
+    margin: 0;
+}
+.uncompleted-task {
+    height: 75px;
+    display: flex;
+    padding: 12px;
+    margin: 15px 0px 10px 0px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, rgba(0, 102, 255, 0.7), rgba(5, 0, 255, 0.4));
+}
+.uncompleted-task-info {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.form-check-input {
+    border: 0;
+    width: 30px;
+    height: 30px;
+        
+    margin-right: 15px;
+    background-color: transparent;
+}
+.btn-check-input {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+.uncompleted-task-title{
+    font-size: 24px;
+}
+/*.uncompleted-task-date {
+    font-size: 14px;
+    margin-top: 10px;
+}*/
+.delete-task-form {
+    /*width: 30px;
+    height: 25px;*/
+    width: 25px;
+}
+.delete-task-btn {
+    width: 25px;
+    background-color: #ADBFFF;
+    border: 0;
+    border-radius: 6px;
+    color: black;
+}
+.btn-add {
+    position: absolute;
+    top: 90%;
+    left: 93%;
+    display: block;
+    width: 70px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #ADBFFF;
+    font-size: 32px;
+    color: #ffffff;
+}
+/*AddTaskPage*/
+.addTask-header {
+    text-align: center;
+    color: #ADBFFF;
+    font-size: 80px;
+}
+.addTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.addTask-form {
+    font-size: 24px;
+    margin-top: 30px;
+    flex-direction: column;
+    text-align: center;
+    color: #ADBFFF;
+    width: 600px;
+}
+.addTask-form div {
+}
+.attribute-task {
+    display: flex;
+}
+.text-danger{
+    font-size: 16px;
+    padding: 2px;
+}
+.control-label {
+    width: 300px;
+}
+.btn-add-task {
+    margin-top: 15px;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: linear-gradient(to bottom, rgba(5, 0, 255, 1), rgba(0, 102, 255, 0.8));
+}
+.btn-add-task:hover {
+    color: #ADBFFF;
+}
+.link-to-home {
+    border-radius: 10px;
+    width: 200px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(5, 0, 255, 1), rgba(0, 102, 255, 0.8));
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 24px;
+    height: 50px;
+}
+.link-to-home:hover {
+    color: #ADBFFF;
+}
+.btn-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

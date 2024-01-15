@@ -1,0 +1,73 @@
+﻿@model List<Tasks>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1 class="title">To Do List</h1>
+<div class="header">
+	<button class="authorization-btn">sign in</button>
+</div>
+<div class="uncompleted-tasks">
+	<div class="uncompleted-tasks-header">
+		<div class="uncompleted-tasks-header-wrapper">
+			<p>uncompleted tasks</p>
+			<img class="arrow" src="~/pictures/arrow.svg" alt="arrow" />
+		</div>
+		<hr class="line" />
+	</div>
+	<div class="uncompleted-tasks-body">
+		@foreach(var item in Model)
+		{
+			if (!item.IsCompleted)
+			{
+				<div class="uncompleted-task">
+					<div class="uncompleted-task-info">
+						<form class="form-check-input" id="Task-form_@item.Id" asp-route-id="@item.Id" asp-controller="Tasks" asp-action="CompletedTask">
+							<input class="btn-check-input" id="TaskCheckbox_@item.Id" type="checkbox" checked="@item.IsCompleted" />
+						</form>
+						<div class="uncompleted-task-info-wrapper">
+							<p class="uncompleted-task-title">@item.Name</p>
+							<p class="uncompleted-task-date">@item.dateCreate.ToShortDateString()</p>
+						</div>
+					</div>
+					<form method="post" class="delete-task-form" asp-route-id="@item.Id" asp-controller="Tasks" asp-action="Delete">
+						<input class="delete-task-btn" type="submit" value="x" />
+					</form>
+				</div>
+			}
+		}
+	</div>
+</div>
+<div class="uncompleted-tasks">
+	<div class="uncompleted-tasks-header">
+		<div class="uncompleted-tasks-header-wrapper">
+			<p>completed tasks</p>
+			<img class="arrow" src="~/pictures/arrow.svg" alt="arrow" />
+		</div>
+		<hr class="line" />
+	</div>
+	<div class="uncompleted-tasks-body">
+		@foreach (var item in Model)
+		{
+			if (item.IsCompleted)
+			{
+				<div class="uncompleted-task">
+					<div class="uncompleted-task-info">
+						<form class="form-check-input" id="Task-form_@item.Id" asp-route-id="@item.Id" asp-controller="Tasks" asp-action="CompletedTask">
+							<input class="btn-check-input" id="TaskCheckbox_@item.Id" type="checkbox" checked="@item.IsCompleted" />
+						</form>
+						<div class="uncompleted-task-info-wrapper">
+							<p class="uncompleted-task-title">@item.Name</p>
+							<p class="uncompleted-task-date">@item.dateCreate.ToShortDateString()</p>
+						</div>
+					</div>
+					<form method="post" class="delete-task-form" asp-route-id="@item.Id" asp-controller="Tasks" asp-action="Delete">
+						<input class="delete-task-btn" type="submit" value="x" />
+					</form>
+				</div>
+			}
+		}
+	</div>
+</div>
+<a class="btn-add" asp-controller="Tasks" asp-action="Add">+</a>
+
+
